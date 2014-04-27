@@ -90,10 +90,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysql.3owl.com',
-	'username' => 'u158280208_admin',
-	'password' => 'rCQH6exN4D',
-	'database' => 'u158280208_maiac',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'maiachess',
 	'dbdriver' => 'mysql',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
