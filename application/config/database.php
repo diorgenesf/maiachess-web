@@ -90,10 +90,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysql.hostinger.com.br',
-	'username' => 'u865381279_admin',
-	'password' => 'kdBX7jEDMI',
-	'database' => 'u865381279_maiac',
+	'hostname' => 'mysql.3owl.com',
+	'username' => 'u158280208_admin',
+	'password' => 'rCQH6exN4D',
+	'database' => 'u158280208_maiac',
 	'dbdriver' => 'mysql',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
