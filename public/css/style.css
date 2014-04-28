@@ -1,10 +1,13 @@
 /* ####################################   Importação de Fontes     ##################################*/
+
+/*
 @font-face {
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 300;
 	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }
+*/
 
 /* ####################################   Classes Menu  ##################################*/
 
@@ -43,7 +46,7 @@
 
 .TopMenu .Menu li:hover{
 	font-weight: bold;
-	font-family: "Open Sans Semibold"
+	font-family: Arial, Verdana, Arial, Tahoma, Sans-Serif;
 }
 
 .TopMenu .Menu a{
@@ -85,7 +88,7 @@
 	border: 1px transparent solid;
 	border-radius: 0;
 	outline: none;
-	font-family:"Open Sans",Arial, Verdana, Arial, Tahoma, Sans-Serif;
+	font-family: Arial, Verdana, Arial, Tahoma, Sans-Serif;
 	cursor:pointer;
 }
 .btn:hover{
