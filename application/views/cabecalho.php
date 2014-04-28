@@ -9,4 +9,5 @@
     <link rel="stylesheet" href="public/css/1140.css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="icon" type="image/x-icon" href="public/imagens/favicon.gif">
+    <style type="text/css">.container16{font-family:"Open Sans",Arial, Verdana, Arial, Tahoma, Sans-Serif;}</style>
 <body>

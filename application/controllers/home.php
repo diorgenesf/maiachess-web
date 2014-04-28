@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
         $this->load->view('cabecalho');
-        $this->load->view('menu');
+        $this->load->view('home/conteudo');
         $this->load->view('rodape');
 	}
 }
