@@ -61,7 +61,11 @@
 	color:#C33531;
 	font-weight: bold;
 }
-
+.Menu .btn:hover{
+	width: 130%;
+	padding: 12% 0;
+	margin-left: -15%;
+}
 .Menu .btn{
 	width: 120%;
 	padding: 10% 0;
@@ -102,9 +106,54 @@
 	background-repeat: no-repeat;
 }
 #Contato{
-	height: 547px;
-	background-image: url("../../public/imagens/bg-inicio.gif");
+	height: 487px;
+	background-image: url("../../public/imagens/bg-contato.gif");
 	background-repeat: no-repeat;
+	padding-top:60px;
+}
+#Contato label{
+	font-weight: bold;
+	color:#FFFFFF;
+	font-size: 15px;
+	padding-left:5px;
+}
+#Contato input[type="text"], #Contato textarea{
+	width: 80%;
+	padding:5px;
+}
+#Contato textarea{
+	height: 150px;
+}
+#Contato input[type="button"]{
+	width: 82%;
+	color:#FFFFFF;
+	background-color: #C33531;
+	padding: 5px 0;
+}
+#Contato .dados-endereco{
+	width: 80%;
+	float:right;
+	padding: 10px 0;
+	color:black;
+	font-size: 14px;
+}
+#Contato .dados-endereco img{
+	float:left;
+	padding-left:5px;
+	width:8%;
+}
+#Contato .dados-endereco p{
+	float:right;
+	width: 85%;
+	padding-right: 5%;
+}
+
+#Contato .endereco{
+	margin-top:22px;
+}
+
+#Contato .phone, #Contato .mail{
+	margin-top: 48px;
 }
 
 .TituloContent h1{
@@ -131,7 +180,12 @@
 	margin-left: 28%;
 	font-size: 23px;
 }
-.member img{
+
+.member{
+	margin-top:10px;
+}
+
+.member .foto{
 	width: 65%;
 }
 .member .nome{
@@ -153,6 +207,32 @@
 	padding-left:30px;
 	padding-right:30px;
 }
+
+.member .facebook, .member .google{
+	
+}
+.member .facebook img, .member .google img{
+	width: 30px;
+	margin-top:10px;
+}
+
+/* ####################################   Rodape  ##################################*/
+#rodape .row{ 
+	margin:0;
+}
+#rodape p{
+	font-size: 12px;
+	text-align: right;
+	color:gray;
+}
+#rodape a:hover{
+	font-weight: bold;
+}
+#rodape a{
+	text-decoration: none;
+	color:#C33531;
+}
+
 /* ####################################   Classes Botões  ##################################*/
 
 .btn{
@@ -166,4 +246,12 @@
 }
 .btn:hover{
 	font-weight: bold;
+	box-shadow: 0 2px 10px 1px #A2A3A5;
+}
+
+
+/* ####################################   Transpartent Box's  ##################################*/
+.box-transparent-light{
+	background-color:#FFFFFF;
+	opacity: 0.51;
 }

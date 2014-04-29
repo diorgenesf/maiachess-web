@@ -18,6 +18,7 @@ function selectItemMenu(Item)
 	
 	Item.parentNode.className="active";
 	scrollToAnchor(Item.name);
+	return false;
 }
 
 /* ################################################  Scroll Menu ################################################  */
@@ -70,7 +71,7 @@ function scrollPage()
 	if (scrTime < scrDur) {
 		window.scrollTo( 0, easeInOut(scrTime,scrSt,scrDist,scrDur) );
 	}else{
-		window.scrollTo( 0, scrSt+scrDist );
+		window.scrollTo( 0, (scrSt+scrDist) );
 		clearInterval(scrollInt);
 	}
 }
@@ -101,11 +102,12 @@ function scrollToAnchor(aname)
 	else
 		scrSt = document.body.scrollTop;
 
-	
-	
-	scrDist = (ele.offsetTop - scrSt) - 106;
+	scrDist = (ele.offsetTop - scrSt);
+	scrDist -= 106;
+	//scrDur = 500;
 	scrDur = 500;
-	scrTime = 0;
+	scrTime = 10;
+	//scrInt = 10;
 	scrInt = 10;
 	
 	// set interval
@@ -119,7 +121,7 @@ EASING FUNCTIONS
 
 function easeInOut(t,b,c,d)
 {
-	return c/2.5 * (1 - Math.cos(Math.PI*t/d)) + b;
+	return c/2 * (1 - Math.cos(Math.PI*t/d)) + b;
 }
 
 

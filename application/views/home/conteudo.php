@@ -23,16 +23,16 @@
 							<input type="button" class="btn" value="Entrar" />
 						</li>
 						<li>
-							<a name="Contato" onclick="selectItemMenu(this);" href="<?php echo base_url(); ?>#Contato">Contato</a>
+							<a name="Contato" onclick="return selectItemMenu(this);" href="<?php echo base_url(); ?>#Contato">Contato</a>
 						</li>
 						<li>
-							<a name="Equipe" onclick="selectItemMenu(this);" href="<?php echo base_url(); ?>#Equipe">Equipe</a>
+							<a name="Equipe" onclick="return selectItemMenu(this);" href="<?php echo base_url(); ?>#Equipe">Equipe</a>
 						</li>
 						<li>
-							<a name="Sobre" onclick="selectItemMenu(this);" href="<?php echo base_url(); ?>#Sobre">Sobre</a>
+							<a name="Sobre" onclick="return selectItemMenu(this);" href="<?php echo base_url(); ?>#Sobre">Sobre</a>
 						</li>
 						<li>
-							<a name="Inicio" onclick="selectItemMenu(this);" href="<?php echo base_url(); ?>#Inicio">Inicio</a>
+							<a name="Inicio" onclick="return selectItemMenu(this);" href="<?php echo base_url(); ?>#Inicio">Inicio</a>
 						</li>
 					</ul>
 				</div>
@@ -84,14 +84,104 @@
 							E que abundância meu irmão viuu!! Assim você vai matar o papai. 
 							Só digo uma coisa, Domingo ela não vai! Danadaa!!
 						</p>
-						<img class="google" src="public/imagens/members/google.png"/>
-						<img class="facebook" src="public/imagens/members/facebook.png"/>
+						<a href="" class="google"><img src="public/imagens/google.png"/></a>
+						<a href="" class="facebook"><img src="public/imagens/facebook.png"/></a>
+					</center>
+				</div>
+
+				<div class="column4 member">
+					<center>
+						<img src="public/imagens/members/teammember2.png"/>
+						<p class="nome">GABRIEL ALMEIDA</p>
+						<p class="tituloDescricao">Estudante</p>
+						<p class="descricao">
+							Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! 
+							E que abundância meu irmão viuu!! Assim você vai matar o papai. 
+							Só digo uma coisa, Domingo ela não vai! Danadaa!!
+						</p>
+						<a href="" class="google"><img src="public/imagens/google.png"/></a>
+						<a href="" class="facebook"><img src="public/imagens/facebook.png"/></a>
+					</center>
+				</div>
+
+				<div class="column4 member">
+					<center>
+						<img src="public/imagens/members/teammember3.png"/>
+						<p class="nome">MARCOS VINICIUS</p>
+						<p class="tituloDescricao">Estudante</p>
+						<p class="descricao">
+							Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! 
+							E que abundância meu irmão viuu!! Assim você vai matar o papai. 
+							Só digo uma coisa, Domingo ela não vai! Danadaa!!
+						</p>
+						<a href="" class="google"><img src="public/imagens/google.png"/></a>
+						<a href="" class="facebook"><img src="public/imagens/facebook.png"/></a>
+					</center>
+				</div>
+
+				<div class="column4 member">
+					<center>
+						<img src="public/imagens/members/teammember4.png" class="foto"/>
+						<p class="nome">RENATO CÉSAR</p>
+						<p class="tituloDescricao">Estudante</p>
+						<p class="descricao">
+							Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! 
+							E que abundância meu irmão viuu!! Assim você vai matar o papai. 
+							Só digo uma coisa, Domingo ela não vai! Danadaa!!
+						</p>
+						<a href="" class="google"><img src="public/imagens/google.png"/></a>
+						<a href="" class="facebook"><img src="public/imagens/facebook.png"/></a>
 					</center>
 				</div>
 			</div>
 
 		</div>
 	</div>
-	<div id="Contato"></div>
+	<div id="Contato">
+		<div class="container16">
+
+			<div class="column8">
+				<form>
+					<div class="row">
+						<label>Nome</label>
+						<br />
+						<input type="text" placeholder="Informe seu nome"/>
+					</div>
+					<div class="row">
+						<label>Email</label>
+						<br />
+						<input type="text" placeholder="Informe seu email"/>
+					</div>
+					<div class="row">
+						<label>Mensagem</label>
+						<br />
+						<textarea placeholder="Informe sua dúvida, sugestão ou outra coisa"></textarea>
+					</div>
+					<div class="row">
+						<input type="button" class="btn" value="Enviar"/>
+					</div> 
+				</form>
+			</div>
+
+			<div class="column8">
+				<div class="row dados-endereco box-transparent-light endereco">
+					<img src="public/imagens/here.png">
+					<p>
+						Campus Universitário Professor Darcy Ribeiro - Vila Mauricéia - Montes Claros - MG
+					</p>
+				</div>
+
+				<div class="row dados-endereco box-transparent-light phone">
+					<img src="public/imagens/phone.png">
+					<p> (38) 9999-9999  -  (38) 9999-9999</p>
+				</div>
+
+				<div class="row dados-endereco box-transparent-light mail">
+					<img src="public/imagens/mail.png">
+					<p>	maiachess@teste.com.br </p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script src="public/js/inicio.js"></script>
