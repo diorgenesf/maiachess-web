@@ -45,9 +45,15 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-            $this->load->view('cabecalho');
-            $this->load->view('welcome_message');
-            $this->load->view('rodape');
+		$this->load->model('teste','',TRUE);
+		$dados['resultado']= $this->teste->select();
+        $this->load->view('cabecalho');
+        $this->load->view('welcome_message',$dados);
+        $this->load->view('rodape');
+	}
+	public function add($value = NULL)
+	{
+		echo "Valor: ".$value;
 	}
 }
 

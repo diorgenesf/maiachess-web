@@ -4,8 +4,7 @@
     <p>Texto Legal!</p>
     <p>
         <?php 
-        foreach ($resultado as $value) {
-            echo "   - ".$value->obs."<br />";
-        } ?>
+        	echo $texto;
+        ?>
     </p>
 </div>

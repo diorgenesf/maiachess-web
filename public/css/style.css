@@ -55,7 +55,6 @@
 }
 .Menu .active{
 	border-bottom: 4px solid #C33531;
-
 	font-weight: bold;
 }
 .Menu .active a{
@@ -73,13 +72,87 @@
 	background-color: #C33531;
 }
 
+.ContentTopMenu{
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+.ContentTopMenu:target{
+	position: relative;
+	margin-top:106px;
+}
+
 /* ####################################   Tela Inicial  ##################################*/
+.Content{
+	padding-top:106px;
+}
 #Inicio{
 	height: 547px;
-	background-image: url("../../public/imagens/inicio.gif");
+	background-image: url("../../public/imagens/bg-inicio.gif");
+	background-repeat: no-repeat;
+}
+#Sobre{
+	height: 547px;
+	background-color: #339F95;
+	color:#FFFFFF;
+}
+#Equipe{
+	height: 547px;
+	background-image: url("../../public/imagens/bg-equipe.gif");
+	background-repeat: no-repeat;
+}
+#Contato{
+	height: 547px;
+	background-image: url("../../public/imagens/bg-inicio.gif");
 	background-repeat: no-repeat;
 }
 
+.TituloContent h1{
+	color: #FFFFFF;
+	text-align: center;
+	text-shadow:2px 2px #20202F;
+}
+.TituloContent img{
+	height: 17px;
+	padding-top: 17px;
+}
+.TituloContent{
+	margin-top:30px;
+}
+
+.logoUnimontes{
+	padding-top: 60px;
+	margin-left: 42.6%;
+}
+
+.textoSobre{
+	padding-top: 50px;
+	text-align: center;
+	margin-left: 28%;
+	font-size: 23px;
+}
+.member img{
+	width: 65%;
+}
+.member .nome{
+	margin-top:15px;
+	font-weight: bold;
+	width: 90%;
+	padding-bottom: 5px;
+	border-bottom: 5px solid black;
+}
+.member .tituloDescricao{
+	margin-top:10px;
+	margin-bottom:5px;
+	font-size:14px;
+}
+.member .descricao{
+	margin-top:10px;
+	color:black;
+	font-size:12px;
+	padding-left:30px;
+	padding-right:30px;
+}
 /* ####################################   Classes Botões  ##################################*/
 
 .btn{
