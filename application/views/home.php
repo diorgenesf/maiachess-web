@@ -13,14 +13,14 @@
 				</div> 
 				<div class="column4">
 					<a href="<?php echo base_url(); ?>" target="_self">
-						<img src="public/imagens/maiachess.gif" class="LogoMaiaChess"/>
+						<img src="public/imagens/maiachess.gif" class="LogoMaiaChess-home"/>
 					</a>
 				</div>
 
 				<div class="column11">
-					<ul class="Menu">
+					<ul class="Menu-home MenuAll">
 						<li>
-							<input type="button" class="btn" value="Entrar" />
+							<form action="<?php echo base_url(); ?>login" method="post"><input type="submit" class="btn" value="Entrar" /></form>
 						</li>
 						<li>
 							<a name="Contato" onclick="return selectItemMenu(this);" href="<?php echo base_url(); ?>#Contato">Contato</a>
