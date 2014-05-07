@@ -1,13 +1,30 @@
 /* ####################################   Importação de Fontes     ##################################*/
 
-/*
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+body{
+	font-family:"Open Sans",Arial, Verdana, Arial, Tahoma, Sans-Serif;
 }
-*/
+
+/* ####################################   Rodape  ##################################*/
+
+footer{	
+	height: 20px;
+}
+footer .row{ 
+	margin:0;
+}
+footer p{
+	font-size: 12px;
+	text-align: right;
+	color:gray;
+}
+footer a:hover{
+	font-weight: bold;
+}
+footer a{
+	text-decoration: none;
+	color:#C33531;
+}
+
 
 /* ####################################   Classes Menu-home  ##################################*/
 
@@ -128,6 +145,11 @@
 	background-image: url("../../public/imagens/bg-login.gif");
 	background-repeat: no-repeat;
 }
+
+#Login .container16{
+	height: 547px;
+}
+
 .underTopMenu{
 	height: 106px;
 }
@@ -323,20 +345,9 @@
 	margin-top:10px;
 }
 
-/* ####################################   Rodape  ##################################*/
-#rodape .row{ 
-	margin:0;
-}
-#rodape p{
-	font-size: 12px;
-	text-align: right;
-	color:gray;
-}
-#rodape a:hover{
-	font-weight: bold;
-}
-#rodape a{
-	text-decoration: none;
+
+/* ####################################   Formulario  ##################################*/
+.error{
 	color:#C33531;
 }
 
@@ -367,6 +378,7 @@
 .btnInLiToFull{
 	width: 50% !important;
 }
+
 
 /* ####################################   Transpartent Box's  ##################################*/
 .box-transparent-light{
