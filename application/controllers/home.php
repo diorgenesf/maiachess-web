@@ -5,8 +5,24 @@ class Home extends CI_Controller {
         
 	public function index()
 	{
-        $this->load->view('cabecalho');
-        $this->load->view('home');
-        $this->load->view('rodape');
+		if(!$this->session->userdata('nick'))
+		{
+			$metadados['name_view'] = "home";
+			$metadados['menu_view'] = "menu/home";
+			$this->load->view('template',$metadados);
+		}
+		else
+		{
+			$metadados['menu_active'] = "salas";
+			$metadados['name_view'] = "salas";
+			$metadados['menu_view'] = "menu/logado";
+			$this->load->view('template',$metadados);
+		}        
+	}
+
+	public function sair()
+	{
+		$this->session->unset_userdata('nick');
+		header("location: ".base_url());
 	}
 }

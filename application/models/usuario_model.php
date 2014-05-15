@@ -16,11 +16,30 @@ class Usuario_model extends CI_Model{
 		
 	}
 
-	public function getAll()
+	public function getAllNick()
 	{
 		$this->db->select('nick');
 		$query = $this->db->get('usuario');
 
 		return $query->result();
+	}
+
+	public function getUser($nick = NULL)
+	{
+		if($nick==NULL) return false;
+
+		$query = $this->db->get_where('usuario', array('nick' => $nick));
+		return $query->result();
+	}
+
+	public function getDerrotas($nick = NULL)
+	{
+		if($nick==NULL) return false;
+
+		$query = $this->db->get_where('usuario', array('nick' => $nick));
+		$user = $query->result();
+
+		$query = "SELECT COUNT(*) FROM historico WHERE h.perdedor = '".$user->nick."'";
+		return $query->result;
 	}
 }

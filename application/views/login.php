@@ -1,31 +1,3 @@
-<div class="ContentTopMenu">
-	<div class="BarTopMenu"></div>
-	<nav class="TopMenu">
-		<div class="container16"> 
-			<div class="row">
-				<div class="column1">
-					<a href="<?php echo base_url(); ?>" target="_self">
-						<img src="public/imagens/logo.gif" class="Logo"/>
-					</a>
-				</div> 
-				<div class="column13">
-					<a href="<?php echo base_url(); ?>" target="_self">
-						<center><img src="public/imagens/maiachess.gif" class="LogoMaiaChess"/></center>
-					</a>
-				</div>
-
-				<div class="column2">
-					<ul class="Menu-login MenuAll">
-						<li class="btnInLiToFull">
-							<form action="<?php echo base_url(); ?>" method="post"><input type="submit" class="btn" value="Voltar" /></form>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
-</div>
-<div class="underTopMenu"></div>
 <div id="Login">
 	<div class="container16">
 		<div class="row">
@@ -122,20 +94,20 @@
 				</div>				
 			</div>
 
-			<form class="Cadastro" name="formEntrar">
+			<form class="Cadastro" name="formEntrar" method="post" action="<?php echo base_url(); ?>login/verifica">
 				<div class="row">
-					<label>NickName</label>
+					<?php echo $nick_login; ?>
 					<br />
-					<input type="text" placeholder="Informe seu NickName"/>
+					<input type="text" name="nick_login" placeholder="Informe seu NickName"/>
 				</div>
 				<div class="row">
-					<label>Senha</label>
+					<?php echo $senha_login; ?>					
 					<br />
-					<input type="password" placeholder="Informe sua Senha"/>
+					<input type="password" name="senha_login" placeholder="Informe sua Senha"/>
 				</div>
 
 				<div class="row">
-					<input type="button" class="btn" value="Entrar"/>
+					<input type="submit" class="btn" value="Entrar"/>
 				</div> 
 			</form>
 			<a href="">Esqueceu a Senha?</a>
