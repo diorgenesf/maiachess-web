@@ -5,12 +5,12 @@
 			<div class="row">
 				<div class="column1">
 					<a href="<?php echo base_url(); ?>" target="_self">
-						<img src="public/imagens/logo.gif" class="Logo"/>
+						<img src="<?php echo base_url(); ?>public/imagens/logo.gif" class="Logo"/>
 					</a>
 				</div> 
 				<div class="column13">
 					<a href="<?php echo base_url(); ?>" target="_self">
-						<center><img src="public/imagens/maiachess.gif" class="LogoMaiaChess"/></center>
+						<center><img src="<?php echo base_url(); ?>public/imagens/maiachess.gif" class="LogoMaiaChess"/></center>
 					</a>
 				</div>
 

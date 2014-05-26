@@ -6,9 +6,9 @@
 <head>
 	<meta charset="utf-8">
     <title><?php if(!isset($title)) echo "Maia Chess"; else echo $title; ?></title>
-    <link rel="stylesheet" href="<?php base_url(); ?>public/css/1140.css">
-    <link rel="stylesheet" href="<?php base_url(); ?>public/css/style.css">
-    <link rel="icon" type="image/x-icon" href="<?php base_url(); ?>public/imagens/favicon.gif">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/1140.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css">
+    <link rel="icon" type="image/x-icon" href="<?php echo base_url(); ?>public/imagens/favicon.gif">
 <body>
 	<?php 
 		$this->load->view($menu_view);

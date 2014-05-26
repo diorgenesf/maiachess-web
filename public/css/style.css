@@ -4,6 +4,134 @@ body{
 	font-family:"Open Sans",Arial, Verdana, Arial, Tahoma, Sans-Serif;
 }
 
+/* ####################################   Modal  ##################################*/
+.MyModal{
+	display: none;
+}
+.MyModal .backgroundModal{
+	padding:0;
+	width: 100%;
+	height: 100%;
+	background:#4C4C4C;
+	position: absolute;
+	opacity: 0.4;
+	background-size: 100%;
+	z-index: 200;
+	top:0;
+	left: 0;
+	overflow: hidden;
+}
+.MyModal .contentModal{
+	width: 360px;
+	color:black;
+	font-family: 'Helvetica', Arial;
+	border:1px solid #333333;
+	/*border-radius: 10px;*/
+	position: absolute;
+	top:60%;
+	left:50%;
+	margin:-100px 0 0 -150px;
+	z-index: 300;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+.MyModal a:hover{
+	text-shadow:1px 1px gray;
+}
+.MyModal a{
+	text-decoration: none;
+	color:black;
+}
+.MyModal .headModal{	
+	padding: 0px 10px 0px 0px;
+	background-color:#FFFFFF;
+	height: 35px;
+	border-bottom: 1px solid #ccc;
+	background-color: #ECECFB;
+	/*
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	*/
+}
+.MyModal .bodyModal{
+	background-color: #FFFFFF;
+	padding: 10px;
+	font-size: 14px;
+	text-align: justify;
+	/*
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	*/
+}
+.MyModal .titleModal{
+	float:left;
+	width: 90%;
+	padding: 10px 5px 10px 10px;
+	color:#666666;
+}
+
+.MyModal .CloseModalContent{
+	float:right;
+	width: 4%;
+	margin-top:10px;
+}
+
+/* ####################################   Perfil  ##################################*/
+#Perfil{
+	background-image: url("../../public/imagens/bg-clock.jpg");
+	background-repeat: repeat;
+	height: 850px;
+	padding-bottom: 10px;
+}
+#Perfil .row{
+	margin-bottom: 0;
+}
+.PerfilContent .column16{
+	margin-top:10px;
+}
+.PerfilContent input[type="text"]:focus,.PerfilContent input[type="password"]:focus{
+	color:black;
+}
+.PerfilContent input[type="text"],.PerfilContent input[type="password"],.PerfilContent .slt-large{
+	width: 425px;
+	border: none;
+	padding: 5px;
+	color:gray;
+}
+.PerfilContent .slt-large{
+	width: 435px;
+	padding: 4px;
+}
+
+#Perfil .nascimento input[type="text"]{
+	width: 126px;
+	margin-right: 7px;
+}
+#Perfil .nascimento select{
+	width: 135px;
+	margin-right: 7px;
+	padding: 4px;
+	border: none;
+}
+
+.PerfilContent input[type="button"],.PerfilContent input[type="submit"]{
+	width: 125px;
+	margin-top: -0.5px;
+	margin-left: -4px;
+	padding: 3px 3px 5px 3px;
+	background-color:#C33531;
+	color:#FFFFFF;
+}
+#Perfil .SubTituloContent {
+	margin-top: 10px;
+}
+#Perfil .SubTituloContent img{
+	height: 4px;
+	width: 98% !important;
+}
+#Perfil .SubTituloContent h3{
+	color:#FFFFFF;
+	text-align: center;
+}
 /* ####################################   Rodape  ##################################*/
 
 footer{	
@@ -26,17 +154,30 @@ footer a{
 }
 
 /* ####################################   Classes Logado  ##################################*/
+.no-top{
+	margin-top:0px !important;
+	padding-top:0px !important;
+}
+
 .bg-logado{
 	height: 547px;
-	background-image: url("../../public/imagens/bg-logado.gif");
+	background-image: url("../../public/imagens/bg-clock.jpg");
 	background-repeat: no-repeat;
+}
+
+
+.avatar2 img{
+	width: 120px;
+	height: 110px;
+	margin-left: -2px;
+	box-shadow: 1px 0px 6px white;
 }
 
 .avatar img{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;
-	box-shadow: 3px 3px white;
+	box-shadow: 2px 2px 2px white;
 	border-radius: 10px;
 }
 
