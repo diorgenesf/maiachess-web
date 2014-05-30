@@ -4,6 +4,50 @@ body{
 	font-family:"Open Sans",Arial, Verdana, Arial, Tahoma, Sans-Serif;
 }
 
+/* ####################################   Duvidas  ##################################*/
+#Duvidas .container16{
+	height: 607px;
+}
+#Duvidas {
+	background-image: url("../../public/imagens/bg-clock.jpg");
+	background-repeat: repeat;
+	height: 600px;
+	padding-bottom: 10px;
+	color:#FFFFFF;
+}
+#Duvidas .SubTituloContent {
+	margin-top: 10px;
+}
+#Duvidas .SubTituloContent img{
+	height: 4px;
+	width: 98% !important;
+}
+#Duvidas .SubTituloContent h3{
+	color:#FFFFFF;
+	text-align: center;
+}
+#Duvidas .SubTituloContent h4{
+	text-align: center;
+}
+#Duvidas input[type="text"], #Duvidas textarea{
+	width: 98%;
+	padding:5px;
+}
+#Duvidas textarea{
+	height: 150px;
+}
+#Duvidas input[type="submit"]{
+	width: 20%;
+	color:#FFFFFF;
+	background-color: #C33531;
+	padding: 5px 0;
+	float: right;
+}
+#Duvidas .seila h4{
+	padding: 5px 0;
+}
+
+
 /* ####################################   Modal  ##################################*/
 .MyModal{
 	display: none;
