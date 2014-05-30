@@ -15,16 +15,18 @@
 			</div>
 
 			<div class="PerfilContent">
-				<form action="" onsubmit="return AlterarDados(this,'foto');" method="get">
-				
-					<div class="column16 prefix7 avatar2">
-						<img src="<?php if($this->session->userdata('avatar')==''){echo base_url().'public/avatar/default.png';} else{echo base_url().'public/avatar/'.$this->session->userdata('avatar');} ?>" alt="Avatar">
-					</div>
+				<div class="column9 prefix7 avatar2">
+					<img id="Avatar" src="<?php if($this->session->userdata('avatar')==''){echo base_url().'public/avatar/default.png';} else{echo base_url().'public/avatar/'.$this->session->userdata('avatar');} ?>" alt="Avatar">
+					<img id="ChangeAvatarLogin" src="<?php echo base_url(); ?>public/imagens/loading.gif" >
+				</div>
 
-					<div class="column16 prefix7 no-top">
-						<input type="button" class="btn" value="Trocar"> 
+				<div class="column9 prefix7 no-top">
+					<div class="ContentFileButton">
+						<span class="btn btn-file">Alterar
+							<input id="fileToUpload" type="file" name="fileToUpload" accept="image/*" onchange="return ajaxFileUpload();">
+						</span>
 					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 
@@ -42,7 +44,7 @@
 			<div class="PerfilContent">
 				<form action="<?php echo base_url(); ?>perfil/ChangeNome" onsubmit="return AlterarDados(this,'nome');" method="get">
 				
-					<div class="column16 prefix4">
+					<div class="column12 prefix4">
 						<input type="text" name="nome" value="<?php echo $this->session->userdata('nome'); ?>">
 						<input type="submit" class="btn" value="Alterar">
 					</div>
@@ -64,7 +66,7 @@
 
 			<div class="PerfilContent">
 				<form action="<?php echo base_url(); ?>perfil/ChangeEmail" onsubmit="return AlterarDados(this,'email');" method="get">
-					<div class="column16 prefix4">
+					<div class="column12 prefix4">
 						<input type="text" name="email" value="<?php echo $this->session->userdata('email'); ?>">
 						<input type="submit" class="btn" value="Alterar">
 					</div>
@@ -87,7 +89,7 @@
 			<div class="PerfilContent">
 				<form action="<?php echo base_url(); ?>perfil/ChangePais" onsubmit="return AlterarDados(this,'pais');" method="get">
 				
-					<div class="column16 prefix4">
+					<div class="column12 prefix4">
 						<input type="text" name="pais" value="<?php echo $this->session->userdata('pais'); ?>">
 						<input type="submit" class="btn" value="Alterar">
 					</div>
@@ -110,7 +112,7 @@
 			<div class="PerfilContent">
 				<form action="<?php echo base_url(); ?>perfil/ChangeCidade" onsubmit="return AlterarDados(this,'cidade');" method="get">
 				
-					<div class="column16 prefix4">
+					<div class="column12 prefix4">
 						<input type="text" name="cidade" value="<?php echo $this->session->userdata('cidade'); ?>">
 						<input type="submit" class="btn" value="Alterar">
 					</div>
@@ -132,7 +134,7 @@
 
 			<div class="PerfilContent">
 				<form action="<?php echo base_url(); ?>perfil/ChangeSexo" onsubmit="return AlterarDados(this,'sexo');" method="get">				
-					<div class="column16 prefix4">
+					<div class="column12 prefix4">
 						<select name="sexo" class="slt-large">
 							<option value="m" <?php if($this->session->userdata('sexo')=='m') echo "selected='selected'"?>>Masculino</option>
 							<option value="f" <?php if($this->session->userdata('sexo')=='f') echo "selected='selected'"?>>Feminino</option>
@@ -142,7 +144,6 @@
 				</form>
 			</div>
 		</div>
-
 		
 		<div class="row">			
 			<div class="SubTituloContent">
@@ -156,8 +157,8 @@
 			</div>
 
 			<div class="PerfilContent nascimento">
-				<form action="<?php echo base_url(); ?>perfil/ChangeNascimento" onsubmit="return AlterarDados(this,'nascimento');" method="get">	
-					<div class="column16 prefix4">
+				<form action="<?php echo base_url(); ?>perfil/ChangeNascimento" onsubmit="return AlterarDados(this,'nascimento');" method="get">
+					<div class="column12 prefix4">
 						
 						<input type="text" name="dia" value="<?php echo $this->session->userdata('nasc_dia'); ?>">
 
@@ -208,13 +209,13 @@
 			</div>
 
 			<div class="PerfilContent">
-				<form action="" onsubmit="return AlterarDados(this,'senha');" method="get">
+				<form action="<?php echo base_url(); ?>perfil/ChangePassword" onsubmit="return CheckPasswords(this);" method="get">
 					
-					<div class="column16 prefix4">
-						<input type="password">
+					<div class="column12 prefix4">
+						<input type="password" name="password">
 					</div>
-					<div class="column16 prefix4">
-						<input type="password">
+					<div class="column12 prefix4">
+						<input type="password" name="passwordToCheck">
 						<input type="submit" class="btn" value="Alterar">
 					</div>
 				</form>
@@ -233,10 +234,9 @@
 			</div>
 
 			<div class="PerfilContent">
-				<form action="" onsubmit="return AlterarDados(this,'desativar');" method="get">
-				
-					<div class="column16 prefix7">
-						<input type="button" class="btn InvokeModal" value="Desativar Conta">
+				<form action="<?php echo base_url(); ?>perfil/DeleteAccount" onsubmit="return AlterarDados(this,'desativar');" method="get">
+					<div class="column9 prefix7">
+						<input type="submit" class="btn" value="Desativar Conta">
 					</div>
 				</form>
 			</div>
@@ -256,5 +256,7 @@
 	</div>
 </div>
 
+<script type="text/javascript" src="<?php echo base_url(); ?>public/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>public/js/ajaxfileupload.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>public/js/modal.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>public/js/perfil.js"></script>

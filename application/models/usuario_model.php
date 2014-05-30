@@ -43,6 +43,19 @@ class Usuario_model extends CI_Model{
 		return $query->result();
 	}
 
+	public function DeleteUser()
+	{
+		$nick = $this->session->userdata('nick');
+		$query = $this->db->query("DELETE FROM usuario WHERE nick = '".$nick."'");
+		
+		if($this->db->affected_rows()>0)
+		{
+			$this->session->sess_destroy();
+			return true;
+		} 
+		else return false;
+	}
+
 	public function UpdateNome($nome = NULL)
 	{
 		if($nome==NULL) return false;
@@ -52,6 +65,33 @@ class Usuario_model extends CI_Model{
 		if($this->db->affected_rows()>0)
 		{
 			$this->session->set_userdata('nome',$nome);
+			return true;
+		} 
+		else return false;
+	}
+
+	public function UpdateAvatar($avatar = NULL)
+	{
+		if($avatar==NULL) return false;
+		$nick = $this->session->userdata('nick');
+		$query = $this->db->query("UPDATE usuario SET avatar = '".$avatar."' WHERE nick = '".$nick."'");
+		
+		if($this->db->affected_rows()>0)
+		{
+			return true;
+		} 
+		else return false;
+	}
+
+	public function UpdateSenha($senha = NULL)
+	{
+		if($senha==NULL) return false;
+		$nick = $this->session->userdata('nick');
+		$query = $this->db->query("UPDATE usuario SET senha = '".md5($senha)."' WHERE nick = '".$nick."'");
+		
+		if($this->db->affected_rows()>0)
+		{
+			$this->session->set_userdata('senha',md5($senha));
 			return true;
 		} 
 		else return false;

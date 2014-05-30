@@ -1,32 +1,25 @@
-document.getElementsByTagName('form').onsubmit=function(e){
-	alert("asdf");
-	console.log(e.target.innerHTML);
-	return false;
-	/*
-	var xmlhttp,
-		url = "http://localhost/maiachess/perfil/"+;
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-		xmlhttp=new XMLHttpRequest();
+function CheckPasswords(form)
+{	
+	var pass = document.getElementsByName("password")[0].value,
+		passCheck = document.getElementsByName("passwordToCheck")[0].value,
+		url = form.action;
+	
+	if(pass!=passCheck || pass.length<1 || passCheck.length<1)
+	{
+		window.scrollTo(0,0);
+		document.getElementById("bodyModal").innerHTML="As senhas não conferem ou a quantidade de caracteres deve ser maior zero!";
+		document.body.style.overflow="hidden";
+		document.getElementsByClassName('MyModal')[0].style.display="block";
 	}
 	else
-	{// code for IE6, IE5
-		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
 	{
-		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-		document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-		}
+		url+="?password="+pass;
+		ResultAlteracao(url,"senha");
 	}
-	xmlhttp.open("GET","ajax_info.txt",true);
-	xmlhttp.send();
 
-	document.body.style.overflow="hidden";
-	document.getElementsByClassName('MyModal')[0].style.display="block";
-	*/
+	return false;
 }
+
 
 function ResultAlteracao(url,name)
 {
@@ -43,17 +36,27 @@ function ResultAlteracao(url,name)
 	{
 		if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-			var answer = xmlhttp.responseText.split("||");
-			if(answer[1]=="false" && name != '')
-			{
-				document.getElementsByName(name)[0].value=answer[2];
+			var answer = xmlhttp.responseText.split("||");	
+			window.scrollTo(0,0);
+			if(name=="senha")
+			{							
+				document.getElementById("bodyModal").innerHTML=answer[0];
+				document.body.style.overflow="hidden";
+				document.getElementsByClassName('MyModal')[0].style.display="block";
+
 			}
-			
-			window.scrollTo(0,window.scrollY);
-			document.getElementById("bodyModal").innerHTML=answer[0];
-			document.body.style.overflow="hidden";
-			document.getElementsByClassName('MyModal')[0].style.display="block";
-			
+			else
+			{
+				if(answer[1]=="false" && name != '')
+				{
+					document.getElementsByName(name)[0].value=answer[2];
+				}
+				
+				window.scrollTo(0,0);
+				document.getElementById("bodyModal").innerHTML=answer[0];
+				document.body.style.overflow="hidden";
+				document.getElementsByClassName('MyModal')[0].style.display="block";
+			}
 		}
 	}
 	xmlhttp.open("GET",url,true);
@@ -103,45 +106,76 @@ function AlterarDados(Form,formTitle)
 			ResultAlteracao(url,'');
 			break;
 		case 'desativar':
+			var url = Form.action;
+		    ResultAlteracao(url,'desativar');
+
 			break;
 	}
-	/*
-	if(countItens==1 && ItensType == "text")
-	{
-		console.log(Form.getElementsByTagName('input')[0].value);
-	}
-	else if(countItens==1 && ItensType == "select")
-	{
-		console.log(Form.getElementsByTagName('select')[0].value);
-	}
-	else if(countItens==3)
-	{
-
-	}
-	
-	else if(countItens > 1)
-	{
-		var Itens = ItensType.split('-'),
-			i,
-			contInput=0,
-			contSelect=0;
-		console.log(Itens);
-		
-		for (i = 0; i < Itens.length; i++) {
-		    if(Itens[i] == "text")
-			{
-				console.log(Form.getElementsByTagName('input')[contInput].value);
-				contInput++;
-			}
-			else if(Itens[i] == "select")
-			{
-				console.log(Form.getElementsByTagName('select')[contSelect].value);
-				contSelect++;
-			}
-		}
-	}
-	*/
-
-	
 	return false;
 }
+
+function ajaxFileUpload()
+{
+    //starting setting some animation when the ajax starts and completes
+    
+    /*
+    $("#loading")
+    .ajaxStart(function(){
+        $(this).show();
+    })
+    .ajaxComplete(function(){
+        $(this).hide();
+    });
+    
+    
+    prepareing ajax file upload
+    url: the url of script file handling the uploaded files
+    fileElementId: the file type of input element id and it will be the index of  $_FILES Array()
+    dataType: it support json, xml
+    secureuri:use secure protocol
+    success: call back function when the ajax complete
+    error: callback function when the ajax failed
+    
+    */
+    var $ActualAvatar = document.getElementById("Avatar"),
+    	$LoadingPicture = document.getElementById("ChangeAvatarLogin");
+
+    $ActualAvatar.src='';
+    $ActualAvatar.style.display="none";
+    $LoadingPicture.style.display="block";
+
+    $.ajaxFileUpload
+    (
+        {
+            url:'./perfil/upload_avatar', 
+            secureuri:false,
+            fileElementId:'fileToUpload',
+            dataType: 'json',
+            success: function (data, status)
+            {
+            	//alert("sucesso!"+data.image);
+
+                if(typeof(data.error) != 'undefined')
+                {
+                    if(data.error != '')
+                    {
+                        console.log(data.error);
+                    }else
+                    {
+                        //console.log(data);
+                        //console.log("\nImagem:"+data.image);
+                        $ActualAvatar.src="public/avatar/"+data.image;
+    					$LoadingPicture.style.display="none";
+                        $ActualAvatar.style.display="block";
+                    }
+                }
+            },
+            error: function (data, status, e)
+            {
+            	alert("Erro!");
+                console.log(e);
+            }
+        }
+    )    
+    return false;
+} 

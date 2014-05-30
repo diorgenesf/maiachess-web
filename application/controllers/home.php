@@ -22,7 +22,8 @@ class Home extends CI_Controller {
 
 	public function sair()
 	{
-		$this->session->unset_userdata('nick');
+		//$this->session->unset_userdata('nick');
+		$this->session->sess_destroy();
 		header("location: ".base_url());
 	}
 }
