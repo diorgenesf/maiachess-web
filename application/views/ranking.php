@@ -27,7 +27,7 @@
 								<img src="<?php echo base_url(); ?>public/imagens/linha.gif"/> 
 							</div>
 							
-							<div class="position"><?php echo $i; ?>º Lugar</div> 
+							<div class="position"><?php echo $i+1; ?>º Lugar</div> 
 							
 							<div class="line">
 								<img src="<?php echo base_url(); ?>public/imagens/linha.gif"/> 
@@ -66,7 +66,7 @@
 								<img src="<?php echo base_url(); ?>public/imagens/linha.gif"/> 
 							</div>
 							
-							<div class="position"><?php echo $i; ?>º Lugar</div> 
+							<div class="position"><?php echo $i+1; ?>º Lugar</div> 
 							
 							<div class="line">
 								<img src="<?php echo base_url(); ?>public/imagens/linha.gif"/> 
