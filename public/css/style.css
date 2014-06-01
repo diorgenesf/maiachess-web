@@ -4,50 +4,6 @@ body{
 	font-family:"Open Sans",Arial, Verdana, Arial, Tahoma, Sans-Serif;
 }
 
-/* ####################################   Duvidas  ##################################*/
-#Duvidas .container16{
-	height: 607px;
-}
-#Duvidas {
-	background-image: url("../../public/imagens/bg-clock.jpg");
-	background-repeat: repeat;
-	height: 600px;
-	padding-bottom: 10px;
-	color:#FFFFFF;
-}
-#Duvidas .SubTituloContent {
-	margin-top: 10px;
-}
-#Duvidas .SubTituloContent img{
-	height: 4px;
-	width: 98% !important;
-}
-#Duvidas .SubTituloContent h3{
-	color:#FFFFFF;
-	text-align: center;
-}
-#Duvidas .SubTituloContent h4{
-	text-align: center;
-}
-#Duvidas input[type="text"], #Duvidas textarea{
-	width: 98%;
-	padding:5px;
-}
-#Duvidas textarea{
-	height: 150px;
-}
-#Duvidas input[type="submit"]{
-	width: 20%;
-	color:#FFFFFF;
-	background-color: #C33531;
-	padding: 5px 0;
-	float: right;
-}
-#Duvidas .seila h4{
-	padding: 5px 0;
-}
-
-
 /* ####################################   Modal  ##################################*/
 .MyModal{
 	display: none;
@@ -119,6 +75,126 @@ body{
 	margin-top:10px;
 }
 
+/* ####################################   Duvidas  ##################################*/
+#Duvidas .container16{
+	height: 607px;
+}
+#Duvidas {
+	background-image: url("../../public/imagens/bg-clock.jpg");
+	background-repeat: repeat;
+	height: 600px;
+	padding-bottom: 10px;
+	color:#FFFFFF;
+}
+#Duvidas .SubTituloContent {
+	margin-top: 10px;
+}
+#Duvidas .SubTituloContent img{
+	height: 4px;
+	width: 98% !important;
+}
+#Duvidas .SubTituloContent h3{
+	color:#FFFFFF;
+	text-align: center;
+}
+#Duvidas .SubTituloContent h4{
+	text-align: center;
+}
+#Duvidas input[type="text"], #Duvidas textarea{
+	width: 98%;
+	padding:5px;
+}
+#Duvidas textarea{
+	height: 150px;
+}
+#Duvidas input[type="submit"]{
+	width: 20%;
+	color:#FFFFFF;
+	background-color: #C33531;
+	padding: 5px 0;
+	float: right;
+}
+#Duvidas .seila h4{
+	padding: 5px 0;
+}
+
+/* ####################################   Ranking  ##################################*/
+#Ranking{
+	background-image: url("../../public/imagens/bg-clock.jpg");
+	background-repeat: repeat;
+	height: 547px;
+	padding-bottom: 10px;
+}
+#Ranking .SubTituloContent {
+	margin-top: 10px;
+}
+#Ranking .SubTituloContent img{
+	height: 4px;
+	width: 98% !important;
+}
+#Ranking .SubTituloContent h3{
+	color:#FFFFFF;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#Ranking .box{
+	margin-top:10px;
+}
+#Ranking .box .half{
+	margin-bottom: 10px;
+}
+#Ranking .lineContentRankedUser{
+	margin:0px 35.625px 0px 35.625px;
+}
+
+.ContentRankedUser{
+	color:#FFFFFF;
+	margin-bottom: 15px;
+}
+
+.ContentRankedUser .row{
+	margin:0px;
+}
+.ContentRankedUser .line{
+	width: 45px;
+	float:left;
+}
+
+.ContentRankedUser .position {
+	width: 103px;
+	text-align: center;
+}
+
+.ContentRankedUser .line,.ContentRankedUser .position{
+	float:left;
+}
+
+.ContentRankedUser .line img{
+	width: 100%;
+	height: 7px;
+	float: inherit;
+	margin-top: 8px;
+}
+
+.ContentRankedUser .vitorias{
+	text-decoration: underline;
+	text-align: center;
+	font-style: italic;
+	font-size: 12px;
+}
+.ContentRankedUser .avatar img{
+	/*margin:auto 41px auto 41px;*/
+	width: 95%;
+	height: 150px;
+}
+
+.ContentRankedUser .nome{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 13px;
+	padding-bottom: 5px;
+}
+
 /* ####################################   Perfil  ##################################*/
 #Perfil{
 	background-image: url("../../public/imagens/bg-clock.jpg");
@@ -157,13 +233,39 @@ body{
 	border: none;
 }
 
-.PerfilContent input[type="button"],.PerfilContent input[type="submit"]{
+.PerfilContent input[type="button"],.PerfilContent input[type="submit"], .btn-file{
 	width: 125px;
 	margin-top: -0.5px;
 	margin-left: -4px;
 	padding: 3px 3px 5px 3px;
 	background-color:#C33531;
 	color:#FFFFFF;
+}
+.btn-file:hover, .btn-file input[type=file]:hover{
+	cursor: pointer;
+	margin-left:2px;
+}
+.btn-file{
+	padding: 5px 42px 5px 42px;
+	font-size: 13px;
+	margin-left: 4px;
+}
+#Perfil .btn-file input[type=file]{	
+	height: 25px;
+	width: 125px;
+	margin-top: -21px;
+	margin-left: 4px;
+}
+.btn-file input[type=file]{
+	position: absolute;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: inherit;
+	display: block;
+}
+#ChangeAvatarLogin{
+	background-color: #FFFFFF;
+	display: none;
 }
 #Perfil .SubTituloContent {
 	margin-top: 10px;
@@ -175,6 +277,7 @@ body{
 #Perfil .SubTituloContent h3{
 	color:#FFFFFF;
 	text-align: center;
+	margin-bottom: 10px;
 }
 /* ####################################   Rodape  ##################################*/
 
@@ -208,21 +311,27 @@ footer a{
 	background-image: url("../../public/imagens/bg-clock.jpg");
 	background-repeat: no-repeat;
 }
-
+.avatar2{
+	margin-bottom: 5px;
+}
 
 .avatar2 img{
 	width: 120px;
 	height: 110px;
-	margin-left: -2px;
-	box-shadow: 1px 0px 6px white;
+	box-shadow: 0px 2px 9px gray;
+	border-radius: 4px;
+	padding: 5px;
+	background-color: #FFF;
 }
 
 .avatar img{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;
-	box-shadow: 2px 2px 2px white;
-	border-radius: 10px;
+	box-shadow: 0px 2px 9px gray;
+	border-radius: 4px;
+	padding: 5px;
+	background-color: #FFF;
 }
 
 .avatar figcaption{
@@ -352,7 +461,7 @@ footer a{
 	margin-bottom: 5px;
 }
 .user-information, .game-container, .chat-container{
-	box-shadow: 0 2px 10px 2px #FFFFFF;
+	box-shadow: 0 0px 4px 1px #FFF;
 	margin-top:15px;
 }
 .user-information .pontos{
@@ -763,6 +872,9 @@ footer a{
 /* ####################################   Transpartent Box's  ##################################*/
 .box-transparent-strong{
 	background-color: rgba(187,187,187,0.8);
+}
+.box-transparent-black{
+	background-color: rgba(0,0,0,0.4);
 }
 .box-transparent-light{
 	/*

@@ -16,6 +16,12 @@ class Usuario_model extends CI_Model{
 		
 	}
 
+	public function getRankedUsers()
+	{
+		$query = $this->db->query("SELECT nome, avatar, vitorias FROM usuario ORDER BY vitorias DESC LIMIT 10");
+		return $query->result();
+	}
+
 	public function getAllNick()
 	{
 		$this->db->select('nick');
