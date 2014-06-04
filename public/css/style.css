@@ -77,12 +77,12 @@ body{
 
 /* ####################################   Duvidas  ##################################*/
 #Duvidas .container16{
-	height: 607px;
+	height: 640px;
 }
 #Duvidas {
 	background-image: url("../../public/imagens/bg-clock.jpg");
 	background-repeat: repeat;
-	height: 600px;
+	height: 680px;
 	padding-bottom: 10px;
 	color:#FFFFFF;
 }
@@ -96,9 +96,11 @@ body{
 #Duvidas .SubTituloContent h3{
 	color:#FFFFFF;
 	text-align: center;
+	font-size: 30px;
 }
 #Duvidas .SubTituloContent h4{
 	text-align: center;
+	font-size: 22px;
 }
 #Duvidas input[type="text"], #Duvidas textarea{
 	width: 98%;
@@ -106,6 +108,7 @@ body{
 }
 #Duvidas textarea{
 	height: 150px;
+	resize: none;
 }
 #Duvidas input[type="submit"]{
 	width: 20%;
@@ -114,9 +117,48 @@ body{
 	padding: 5px 0;
 	float: right;
 }
-#Duvidas .seila h4{
-	padding: 5px 0;
+#Duvidas .conteudo h4{
+	margin-left: 25px;
 }
+#Duvidas .box{
+	margin-top: 15px;
+}
+#Duvidas .box .half{
+	margin-bottom: 15px;
+}
+
+/* ####################################   Regras  ##################################*/
+#Regras .container16{
+	
+}
+#Regras {
+	background-image: url("../../public/imagens/bg-clock.jpg");
+	background-repeat: repeat;
+	height: 1580px;
+	padding-bottom: 10px;
+	color:#FFFFFF;
+}
+#Regras .SubTituloContent {
+	margin-top: 10px;
+}
+#Regras .SubTituloContent img{
+	height: 4px;
+	width: 98% !important;
+}
+#Regras .SubTituloContent h3{
+	color:#FFFFFF;
+	text-align: center;
+	font-size: 30px;
+}
+#Regras .conteudo {
+	padding-top: 10px;
+	text-align: center;
+}
+#Regras .box{
+	height: 1565px;
+	margin-top: 15px;
+}
+
 
 /* ####################################   Ranking  ##################################*/
 #Ranking{
